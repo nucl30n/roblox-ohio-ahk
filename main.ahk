@@ -88,7 +88,7 @@ useHeal(amount) {
 }
 
 XButton2:: {
-    useHeal(false, 1)
+    useHeal(1)
 }
 
 !h:: {
