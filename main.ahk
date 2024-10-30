@@ -4,7 +4,7 @@
 ; Alt + H toggles the auto-heal (higher pitched beep = ON; lower tone == OFF
 ; Only works when Roblox is the active window and full screen
 ; Assumes heals are in slot 8 and up
-; Slot 8 should be medkit, slot 9 should be bandage, etc.
+; Slot 8 should be medkit, slot 9, 10, 11, 12 should be bandage, etc.
 ; 1080p support oly (so far)
 
 toggle := false
@@ -75,11 +75,12 @@ checkMedkit() {
     return true
 }
 
-useHeal(amount) {
+useHeal(count) {
     global hasMedkit, medkitSlot, healSlot, activeGun
     hasMedkit := checkMedkit()
-    Send((hasMedkit && amount > 5) ? medkitSlot : (hasMedkit ? healSlot : medkitSlot))
-    loop amount {
+    Send((hasMedkit && count > 5) ? medkitSlot : (hasMedkit ? healSlot : medkitSlot))
+    loop count {
+        ; need to align count better to healing amount per eat
         Click()
         Sleep(10)
     }
