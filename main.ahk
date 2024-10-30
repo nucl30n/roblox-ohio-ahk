@@ -13,6 +13,8 @@ lowHealth := 0x000000
 checkInterval := 100
 coords := {
     1080p: {
+        w: 1920,
+        h: 1080,
         healthY: 900,
         gunY: 951,
         gunX: [540, 644, 750, 855, 960, 1065, 1170, 1275, 1380],
@@ -27,14 +29,14 @@ activeGun := "2"
 resolution := "1080p"
 
 loop () {
-    global toggle, title
-    height := 0
-    width := 0
-    WinExist("A") && WinGetPos(&x, &y, &width, &height, "A")
+    global coords, toggle, title
+    h := 0
+    w := 0
+    WinExist("A") && WinGetPos(&x, &y, &w, &h, "A")
     proceed := true
     proceed := proceed && toggle
     proceed := proceed && WinExist("A") && InStr(WinGetTitle("A"), title, false)
-    proceed := proceed && (width = A_ScreenWidth && height = A_ScreenHeight)
+    proceed := proceed && (w = coords[resolution].w && h = coords[resolution].h)
     checkEquipped()
     checkMedkit()
     return proceed ? Heal() : Sleep(20)
