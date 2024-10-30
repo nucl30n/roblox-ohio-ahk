@@ -4,8 +4,9 @@
 ; Alt + H toggles the auto-heal (higher pitched beep = ON; lower tone == OFF
 ; Only works when Roblox is the active window and full screen
 ; Assumes heals are in slot 8 and up
-; Slot 8 should be medkit, slot 9, 10, 11, 12 should be bandage, etc.
+; Slot 8 should be medkit, slot 9, 10, 11, 12 etc should be bandage, etc.
 ; 1080p support oly (so far)
+; to-do: checkMedkit func, check type of heal in slot and calibrate number of heals to health needed
 
 toggle := false
 lowHealth := 0x000000
