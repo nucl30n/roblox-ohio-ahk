@@ -79,7 +79,6 @@ useHeal(amount) {
     global hasMedkit, medkitSlot, healSlot, activeGun
     hasMedkit := checkMedkit()
     Send((hasMedkit && amount > 5) ? medkitSlot : (hasMedkit ? healSlot : medkitSlot))
-
     loop amount {
         Click()
         Sleep(10)
