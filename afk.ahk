@@ -6,9 +6,6 @@ toggle := false
 title := "Roblox"
 interval := 10000
 mode := "click"
-screenX := 0
-screenY := 0
-
 screenX := SysGet(78)
 screenY := SysGet(79)
 
