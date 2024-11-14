@@ -28,7 +28,7 @@ title := "Roblox"
 activeGun := "2"
 resolution := "1080p"
 
-loop () {
+mainLoop() {
     global coords, toggle, title
     h := 0
     w := 0
@@ -101,4 +101,4 @@ XButton2:: {
     SoundBeep(toggle ? 1000 : 200)
 }
 
-SetTimer(loop, checkInterval)
+SetTimer(mainLoop, checkInterval)
