@@ -6,8 +6,8 @@ toggle := false
 title := "Roblox"
 interval := 10000
 mode := "click"
-screenX := SysGet(78)
-screenY := SysGet(79)
+; screenX := SysGet(78)
+; screenY := SysGet(79)
 
 mainLoop() {
     global toggle, title, mode, screenX, screenY
