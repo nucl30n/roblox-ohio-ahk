@@ -16,10 +16,10 @@ mainLoop() {
     global toggle, title, mode, screenX, screenY
     h := 0
     w := 0
-    WinExist("A") && WinGetPos(&x, &y, &w, &h, "A")
+    ; WinExist("A") && WinGetPos(&x, &y, &w, &h, "A")
     proceed := true
     proceed := proceed && WinExist("A") && InStr(WinGetTitle("A"), title, false)
-    proceed := proceed && (w = screenX && h = ScreenY)
+    ; proceed := proceed && (w = screenX && h = ScreenY)
     return proceed ? Action() : Sleep(0)
 }
 
