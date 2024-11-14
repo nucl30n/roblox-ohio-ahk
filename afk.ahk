@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 #MaxThreadsPerHotkey 3
-; Alt + A toggles the afk mode
+; ctrl alt z toggles the afk mode
 
 toggle := false
 title := "Roblox"
