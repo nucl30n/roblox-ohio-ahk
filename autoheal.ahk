@@ -5,7 +5,7 @@
 ; Only works when Roblox is the active window and full screen
 ; Assumes heals are in slot 8 and up
 ; Slot 8 should be medkit, slot 9, 10, 11, 12 etc should be bandage, etc.
-; 1080p support oly (so far)
+; 1080p support only (so far)
 ; to-do: checkMedkit func, check type of heal in slot and calibrate number of heals to health needed
 
 toggle := false
